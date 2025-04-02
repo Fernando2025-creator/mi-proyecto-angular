@@ -1,0 +1,7 @@
+<h2>Formulario Simple</h2>
+<form>
+  <label for="nombre">Nombre:</label>
+  <input type="text" id="nombre" [(ngModel)]="nombre" name="nombre" (input)="validarNombre()">
+  <button type="submit" [disabled]="nombreInvalido">Enviar</button>
+</form>
+<p *ngIf="nombreInvalido" style="color: red;">El nombre no puede contener números</p>
